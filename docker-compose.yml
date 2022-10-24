@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  expense_tracker_backend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    stop_signal: SIGINT
+    container_name: expense_tracker_api_service
+    image: expense_tracker_backend
+    ports:
+      - "1337:1337"
+    # ? For automatically updating the container (for development only)
+    volumes:
+      - .:/app
+    restart: always
+
+  expense_tracker_database:
+    image: mongo@sha256:4b58442ec48034662c5581405a24755bdd80730535ccb98e262b6f5ed76c7017
+    container_name: expense_tracker_db_service
+    ports:
+      - "27018:27017"
+    volumes:
+      - ~/data/expense_tracker/db:/data/db
+    restart: unless-stopped
