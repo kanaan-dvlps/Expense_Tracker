@@ -7,7 +7,7 @@ const os = require('os');
 
 // ! ##### Constants #####
 // ? -----------------------
-
+require('./Helpers/globals');
 
 // ! ##### Middlewares #####
 // ? -----------------------
@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // ? Routes files
-
+const expenses = require('./Routes/expenses');
 
 // ? Router middleware
-
+app.use('/api/v1/expenses', expenses);
 
 // ! ##### Server #####
 // ? -----------------------
