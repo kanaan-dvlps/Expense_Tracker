@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2022-11-04T14:37:14.831Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="b-Gdo-Aftw93FWB-o6sN" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-04T14:47:12.058Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="d8g9Oe_lrjx-xe644XBs" version="20.5.1" type="github">
   <diagram id="sGN1RQhpzj4TyrAGg4A0" name="Page-1">
-    <mxGraphModel dx="1231" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="#114B5F" math="0" shadow="0">
+    <mxGraphModel dx="821" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="#114B5F" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Rxnnod5nAKelHgXRd51q-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;fontColor=#4D4D4D;" edge="1" parent="1" source="OytqUMlTrZ75kERAMYIp-1" target="Rxnnod5nAKelHgXRd51q-1">
+        <mxCell id="Rxnnod5nAKelHgXRd51q-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;fontColor=#4D4D4D;strokeColor=#FFFF00;" edge="1" parent="1" source="OytqUMlTrZ75kERAMYIp-1" target="Rxnnod5nAKelHgXRd51q-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OytqUMlTrZ75kERAMYIp-1" value="&lt;font size=&quot;1&quot; color=&quot;#4d4d4d&quot;&gt;&lt;b style=&quot;&quot;&gt;Authentication Service&lt;/b&gt;&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" parent="1" vertex="1">
@@ -27,7 +27,7 @@
         <mxCell id="OytqUMlTrZ75kERAMYIp-4" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#38EFF5;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.client;" parent="1" vertex="1">
           <mxGeometry x="125.48000000000003" y="530" width="102.63" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Rxnnod5nAKelHgXRd51q-1" value="&lt;font size=&quot;1&quot; color=&quot;#4d4d4d&quot;&gt;&lt;b style=&quot;&quot;&gt;Authentication Service&lt;/b&gt;&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="Rxnnod5nAKelHgXRd51q-1" value="&lt;font size=&quot;1&quot; color=&quot;#4d4d4d&quot;&gt;&lt;b style=&quot;&quot;&gt;Expense Tracker Service&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="780" y="450" width="90" height="80" as="geometry" />
         </mxCell>
       </root>
