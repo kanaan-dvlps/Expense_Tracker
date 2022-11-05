@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 const expenses = require('./Routes/expenses');
 
 // ? Router middleware
-app.use('/api/v1/expenses', expenses);
+app.use('/api/v1/balance/expenses', expenses);
 
 // ! ##### Server #####
 // ? -----------------------
