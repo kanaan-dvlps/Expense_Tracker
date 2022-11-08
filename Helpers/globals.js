@@ -1,12 +1,12 @@
-const { VALIDATION_ERROR } = require('../Helpers/responses.json');
+const { ERROR } = require('../Helpers/responses.json');
 
 class BadRequest extends Error {
   constructor(message) {
     super(message);
     this.name = 'BadRequestError';
     this.code = 406;
-    this.type = VALIDATION_ERROR;
-    
+    this.type = ERROR;
+
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, BadRequest);

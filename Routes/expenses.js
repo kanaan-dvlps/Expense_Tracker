@@ -16,7 +16,7 @@ router.post('/', async (req, res, next) => {
 
   } catch (error) {
     console.log('API Error:', error);
-    res.status(error.code).send({
+    res.status(500).send({
       message: error.message,
       type: error.type,
     });
