@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { createExpenseAdapter } = require('../Adapters/Inbound/createExpenseAdapter');
+const { VALIDATED } = require('../Helpers/responses.json');
 
 router.post('/', async (req, res, next) => {
   try {
@@ -7,10 +8,10 @@ router.post('/', async (req, res, next) => {
     const response = await createExpenseAdapter(req.body);
     // res.status(200).send({ response });
 
-    if (response.type === 'EXCEPTION_VALIDATION_ERROR') {
+    if (response.type !== VALIDATED) {
       throw response;
     } else {
-      res.status(200).send({ response })
+      res.status(200).send({ response });
     }
 
   } catch (error) {
@@ -19,7 +20,6 @@ router.post('/', async (req, res, next) => {
       message: error.message,
       type: error.type,
     });
-    next();
   }
 });
 
