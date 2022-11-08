@@ -4,7 +4,7 @@ class BadRequest extends Error {
   constructor(message) {
     super(message);
     this.name = 'BadRequestError';
-    this.code = 406;
+    this.code = 500;
     this.type = ERROR;
 
 
