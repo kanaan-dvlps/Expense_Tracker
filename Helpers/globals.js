@@ -1,17 +1,17 @@
 const { EXCEPTION_VALIDATION_ERROR } = require('../Helpers/responses.json');
 
-class ExceptionBadRequestError extends Error {
+class BadRequest extends Error {
   constructor(message) {
     super(message);
-    this.name = 'ExceptionBadRequestError';
+    this.name = 'BadRequestError';
     this.code = 406;
     this.type = EXCEPTION_VALIDATION_ERROR;
     
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, ExceptionBadRequestError);
+      Error.captureStackTrace(this, BadRequest);
     }
   }
 }
 
-globalThis.ExceptionBadRequestError = ExceptionBadRequestError;
+globalThis.BadRequest = BadRequest;

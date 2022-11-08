@@ -11,9 +11,9 @@ async function expenseAPIBodyValidator(body) {
 
     if (Object.keys(body).length === 0 && body.constructor === Object) {
       // throw `body can't be empty`;
-      throw new ExceptionBadRequestError(EMPTY_BODY_VALIDATION_ERROR);
+      throw new BadRequest(EMPTY_BODY_VALIDATION_ERROR);
     } else if (validateSchema.validate(body).error !== undefined || validateSchema.validate(body).error !== null) {
-      throw new ExceptionBadRequestError(validateSchema.validate(body).error.message);
+      throw new BadRequest(validateSchema.validate(body).error.message);
     } else {
       return VALIDATED
     }
