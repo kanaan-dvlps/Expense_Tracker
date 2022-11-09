@@ -6,5 +6,7 @@ const expenseSchema = new mongoose.Schema({
   expenseType: { type: String },
 });
 
+expenseSchema.index({ parent: 1 });
+
 const expenseModel = mongoose.model('expense', expenseSchema);
 module.exports = expenseModel;
