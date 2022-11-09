@@ -48,9 +48,6 @@
                 <mxCell id="8" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="7">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="9">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="3" value="Income" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="580" y="980" width="120" height="60" as="geometry"/>
                 </mxCell>
@@ -58,9 +55,6 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="19">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="22" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="21">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="24" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="23">
@@ -75,35 +69,23 @@
                 <mxCell id="14" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="13">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="15">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="7" value="Salary" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="290" y="1120" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="New type of inome" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="860" y="1120" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="Invoice" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="118.11000000000001" y="1270" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="Work" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="290" y="1270" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="New type" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="460" y="1270" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="450" y="1270" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="Food and drinks" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1540" y="1120" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1310" y="1120" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="Transport" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1890" y="1120" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="New type" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1240" y="1120" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1540" y="1120" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="23" value="Grocery" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="2240" y="1120" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1770" y="1120" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
