@@ -1,10 +1,10 @@
-const Expenses = require('../Models/expenses.schema');
+const Expense = require('../Models/expenses.schema');
 
 const addExpense = async (entities) => {
   try {
-    const { expense, expenseType } = entities;
+    const { amount, type } = entities;
 
-    const newExpense = await new Expenses({ expense, expenseType });
+    const newExpense = await new Expense({ amount, type });
     const savedExpense = await newExpense.save();
 
     return savedExpense;
@@ -13,9 +13,9 @@ const addExpense = async (entities) => {
   }
 };
 
-const getExpensesByParent = async (parent) => {
+const getExpenses = async () => {
   try {
-    const expenses = await Expenses.find({ parent });
+    const expenses = await Expense.find({});
     return expenses;
   } catch (error) {
     throw error;
@@ -24,24 +24,15 @@ const getExpensesByParent = async (parent) => {
 
 const getExpenseById = async (id) => {
   try {
-    const expense = await Expenses.findOne({ _id: id });
+    const expense = await Expense.findOne({ _id: id });
     return expense
   } catch (error) {
     throw error;
   }
 };
-
-const updateExpense = async () => {
-  try {
-    
-  } catch (error) {
-    throw error;
-  }
-};
-
 const deleteExpense = async (id) => {
   try {
-    const deletedExpense = await Expenses.findOneAndDelete({ _id: id });
+    const deletedExpense = await Expense.findOneAndDelete({ _id: id });
     return deleteExpense;
   } catch (error) {
     throw error;
@@ -50,7 +41,7 @@ const deleteExpense = async (id) => {
 
 module.exports = {
   addExpense,
-  getExpensesByParent,
+  getExpenses,
   getExpenseById,
   deleteExpense,
 };
