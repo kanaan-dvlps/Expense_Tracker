@@ -3,10 +3,10 @@ const { VALIDATED, EMPTY_BODY_VALIDATION_ERROR } = require('../Helpers/responses
 // ! Refactor to factory pattern
 async function expenseAPIBodyValidator(body) {
   try {
-    const { expense, category } = body;
+    const { expense, expenseType } = body;
     const validateSchema = joi.object().keys({
       expense: joi.number().strict().required(),
-      category: joi.string().required(),
+      expenseType: joi.string().required(),
     });
 
     if (Object.keys(body).length === 0 && body.constructor === Object) {
