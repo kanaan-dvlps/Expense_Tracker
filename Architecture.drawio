@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="sGN1RQhpzj4TyrAGg4A0" name="Page-1">
-        <mxGraphModel dx="1502" dy="1001" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="#114B5F" math="0" shadow="0">
+        <mxGraphModel dx="2262" dy="1515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" background="#114B5F" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -35,6 +35,57 @@
                 </mxCell>
                 <mxCell id="Rxnnod5nAKelHgXRd51q-24" value="&lt;b&gt;&lt;font color=&quot;#4d4d4d&quot;&gt;Expense DB&lt;/font&gt;&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;labelBackgroundColor=none;fontSize=10;fontColor=#E6E6E6;fillColor=#F45B69;" parent="1" vertex="1">
                     <mxGeometry x="1170" y="450" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Balance" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1040" y="720" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Income" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="980" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Expense" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1540" y="980" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Salary" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="1120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Invoice" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="118.11000000000001" y="1270" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Work" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1270" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Food and drinks" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1310" y="1120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Transport" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1540" y="1120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Grocery" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1770" y="1120" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
