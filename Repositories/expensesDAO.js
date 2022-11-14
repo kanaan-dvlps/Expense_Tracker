@@ -25,7 +25,7 @@ const getExpenses = async () => {
 const getExpenseById = async (id) => {
   try {
     const expense = await Expense.findOne({ _id: id });
-    return expense
+    return expense;
   } catch (error) {
     throw error;
   }
@@ -33,7 +33,7 @@ const getExpenseById = async (id) => {
 const deleteExpense = async (id) => {
   try {
     const deletedExpense = await Expense.findOneAndDelete({ _id: id });
-    return deleteExpense;
+    return deletedExpense;
   } catch (error) {
     throw error;
   }
