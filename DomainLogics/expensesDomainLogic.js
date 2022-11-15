@@ -1,5 +1,5 @@
 const { createExpenseOutboundPort } = require('../Ports/Outbound/createExpenseOutboundPort');
-
+const { getExpenseByIdOutboundPort } = require('../Ports/Outbound/getExpenseByIdOutboundPort');
 // TODO: Add the expense
 // TODO: retrive the income
 // TODO: check if the the income exists
@@ -18,6 +18,17 @@ const addExpense = async (data) => {
   }
 };
 
+const getExpenseById = async (id) => {
+  try {
+    
+    const expense = await getExpenseByIdOutboundPort(id);
+    return expense;
+
+  } catch (error) {
+    throw new BadRequest(error);
+  }
+}
 module.exports = {
   addExpense,
+  getExpenseById,
 }
