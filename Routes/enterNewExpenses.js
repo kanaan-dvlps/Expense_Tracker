@@ -6,7 +6,7 @@ router.post('/', async (req, res, next) => {
     
   } catch (error) {
     res.status(error.status).send({
-      error: error.message,
+      error: error,
       type: error.type
     });
   }

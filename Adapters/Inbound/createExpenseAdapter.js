@@ -1,18 +1,16 @@
 const { expenseAPIBodyValidator } = require('../../Validators/expensesValidator');
+const { createExpenseInboundPort } = require('../../Ports/Inbound/createExpenseInboundPort');
 const { VALIDATED } = require('../../Helpers/responses.json');
 
 const createExpenseAdapter = async (request) => {
   try {
-    const validation = await expenseAPIBodyValidator(request);
 
-    if (validation.type !== VALIDATED) {
-      throw validation;
-    } else {
-      return validation;
-    }
+    const expense = await expenseAPIBodyValidator(request);
+    const newExpense = await createExpenseInboundPort(expense);
+    return newExpense;
 
   } catch (error) {
-    throw new BadRequest(error.message);
+    throw error;
   }
 }
 

@@ -1,11 +1,11 @@
 const { ERROR } = require('../Helpers/responses.json');
 
 class BadRequest extends Error {
-  constructor(message) {
-    super(message);
+  constructor(ERROR) {
+    super(ERROR);
     this.name = 'BadRequestError';
-    this.code = 500;
-    this.type = ERROR;
+    this.successful = false;
+    this.reason = ERROR;
 
 
     if (Error.captureStackTrace) {
@@ -14,4 +14,18 @@ class BadRequest extends Error {
   }
 }
 
+class Expense {
+  constructor(amount, type) {
+    this.amount = amount;
+    this.type = type;
+    this.successful = true;
+    return {
+      amount: this.amount,
+      type: this.type,
+      successful: this.successful,
+    }
+  }
+}
+
 globalThis.BadRequest = BadRequest;
+globalThis.Expense = Expense;

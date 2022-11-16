@@ -3,19 +3,19 @@ const { VALIDATED, EMPTY_BODY_VALIDATION_ERROR } = require('../Helpers/responses
 // ! Refactor to factory pattern
 async function expenseAPIBodyValidator(body) {
   try {
-    const { expense, expenseType } = body;
+    const { amount, type } = body;
     const validateSchema = joi.object().keys({
-      expense: joi.number().strict().required(),
-      expenseType: joi.string().required(),
+      amount: joi.number().strict().required(),
+      type: joi.string().required(),
     });
 
     if (Object.keys(body).length === 0 && body.constructor === Object) {
       // throw `body can't be empty`;
       throw new BadRequest(EMPTY_BODY_VALIDATION_ERROR);
-    } else if (validateSchema.validate(body).error !== undefined || validateSchema.validate(body).error !== null) {
-      throw new BadRequest(validateSchema.validate(body).error.message);
+    } else if (validateSchema.validate(body).error !== undefined) {
+      throw new BadRequest(validateSchema.validate(body).error.details[0].message);
     } else {
-      return VALIDATED
+      return new Expense(amount, type);
     }
   } catch (error) {
     throw error;

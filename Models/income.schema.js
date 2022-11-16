@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
 const incomeSchema = new mongoose.Schema({
-  income: { type: Number },
-  category: { type: 'income' },
-  incomeType: { type: String },
+  amount: { type: Number },
+  type: { type: String },
 });
 
 const incomeModel = mongoose.model('income', incomeSchema);
