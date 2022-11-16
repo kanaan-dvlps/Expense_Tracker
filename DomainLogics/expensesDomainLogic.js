@@ -20,7 +20,7 @@ const addExpense = async (data) => {
 
 const getExpenseById = async (id) => {
   try {
-    
+
     const expense = await getExpenseByIdOutboundPort(id);
     return expense;
 
@@ -31,4 +31,4 @@ const getExpenseById = async (id) => {
 module.exports = {
   addExpense,
   getExpenseById,
-}
+};

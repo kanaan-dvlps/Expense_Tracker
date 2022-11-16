@@ -16,12 +16,14 @@ const POST_EXPENSE_API_RESULT = async (data) => {
 };
 
 describe("Testing expense router", () => {
-  it("Should return 201 when creating a new expense", async () => {
+  it("Should return data when creating a new expense", async () => {
 
     const result = await POST_EXPENSE_API_RESULT({
       amount: 200,
       type: 'Grocery'
     });
-    expect(result).toEqual({ amount: 200, type: 'Grocery', successful: true });
+    expect(result).toHaveProperty('amount', 200);
+    expect(result).toHaveProperty('type', 'Grocery');
+    expect(result).toHaveProperty('_id');
   });
 });
