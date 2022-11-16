@@ -2,7 +2,7 @@ const { getExpenseByIdInboundPort } = require('../../Ports/Inbound/getExpenseByI
 
 const getExpenseByIdAdapter = async (id) => {
   try {
-    
+
     const expense = await getExpenseByIdInboundPort(id);
     return expense;
 
@@ -10,3 +10,5 @@ const getExpenseByIdAdapter = async (id) => {
     throw error;
   }
 };
+
+module.exports = { getExpenseByIdAdapter };

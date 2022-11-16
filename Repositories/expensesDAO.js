@@ -9,7 +9,7 @@ const addExpense = async (entities) => {
 
     return savedExpense;
   } catch (error) {
-    throw error;
+    throw new BadRequest(error);
   }
 };
 
@@ -18,7 +18,7 @@ const getExpenses = async () => {
     const expenses = await Expense.find({});
     return expenses;
   } catch (error) {
-    throw error;
+    throw new BadRequest(error);
   }
 };
 
@@ -27,7 +27,7 @@ const getExpenseById = async (id) => {
     const expense = await Expense.findOne({ _id: id });
     return expense;
   } catch (error) {
-    throw error;
+    throw new BadRequest(error);
   }
 };
 const deleteExpense = async (id) => {
@@ -35,7 +35,7 @@ const deleteExpense = async (id) => {
     const deletedExpense = await Expense.findOneAndDelete({ _id: id });
     return deletedExpense;
   } catch (error) {
-    throw error;
+    throw new BadRequest(error);
   }
 };
 
