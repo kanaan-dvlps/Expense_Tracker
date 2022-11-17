@@ -1,17 +1,7 @@
-// const  = async () => {
-//   try {
-
-//   } catch (error) {
-//     throw error;
-//   }
-// };
-
-// module.exports = {  };
-
 const { addIncomeOutboundPort } = require('../Ports/Outbound/addIncomeOutboundPort');
-// const {  } = require('../Ports/Outbound/');
-// const {  } = require('../Ports/Outbound/');
-// const {  } = require('../Ports/Outbound/');
+const { getIncomeByIdOutboundPort } = require('../Ports/Outbound/getIncomeByIdOutboundPort');
+const { getIncomesOutboundPort } = require('../Ports/Outbound/getIncomesOutboundPort');
+const { deleteIncomeOutboundPort } = require('../Ports/Outbound/deleteIncomeOutboundAdapter');
 
 const addIncome = async (data) => {
   try {
@@ -27,6 +17,9 @@ const addIncome = async (data) => {
 const getIncomeById = async (id) => {
   try {
 
+    const income = await getIncomeByIdOutboundPort(id);
+    return income;
+
   } catch (error) {
     throw error;
   }
@@ -34,6 +27,9 @@ const getIncomeById = async (id) => {
 
 const getIncomes = async () => {
   try {
+
+    const incomes = await getIncomesOutboundPort();
+    return incomes;
 
   } catch (error) {
     throw error;
@@ -43,11 +39,13 @@ const getIncomes = async () => {
 const deleteIncome = async (id) => {
   try {
 
+    const deletedIncome = await deleteIncomeOutboundPort(id);
+    return deletedIncome;
+
   } catch (error) {
     throw error;
   }
 };
-
 
 module.exports = {
   addIncome,
