@@ -19,10 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // ? Routes files
-const expenses = require('./Routes/expenses');
+const expense = require('./Routes/expenses');
+const income = require('./Routes/income');
 
 // ? Router middleware
-app.use('/api/v1/balance/expenses', expenses);
+app.use('/api/v1/balance/expense', expense);
+app.use('/api/v1/balance/income', income);
 
 // ! ##### Server #####
 // ? -----------------------
@@ -34,8 +36,8 @@ const SERVER = app.listen(process.env.PORT, () => {
   console.log(`\n\x1b[1m\x1b[33m PORT:\x1b[0m\x1b[1m \x1b[32m${process.env.PORT} \x1b[0m`);
 
   console.log(`\x1b[1m\x1b[33m ADDRESS:\x1b[0m\x1b[1m \x1b[32m${process.env.BASE_URL} \x1b[0m`);
-  console.log(`\x1b[1m\x1b[33m IP:\x1b[0m\x1b[1m \x1b[32m${ os.networkInterfaces().eth0[0].address } \x1b[0m`);
-  console.log(`\x1b[1m\x1b[33m HOSTNAME:\x1b[0m\x1b[1m \x1b[32m${ os.hostname() } \x1b[0m \n`);
+  console.log(`\x1b[1m\x1b[33m IP:\x1b[0m\x1b[1m \x1b[32m${os.networkInterfaces().eth0[0].address} \x1b[0m`);
+  console.log(`\x1b[1m\x1b[33m HOSTNAME:\x1b[0m\x1b[1m \x1b[32m${os.hostname()} \x1b[0m \n`);
   // console.log(`\x1b[1m\x1b[33m## ENVIRONMENT:\x1b[0m\x1b[1m \x1b[32m${process.env.ENVIRONMENT} ## \x1b[0m \n`);
   ODM.connection.on('error', error => {
     console.log(`\x1b[41m\x1b[1mODM error\x1b[0m`, error);

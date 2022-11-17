@@ -43,8 +43,9 @@ router.get('/', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
   try {
 
+    const { id } = req.params;
     const deletedExpense = await deleteExpenseAdapter(id);
-    res.status(200).send(deleteExpenseAdapter);
+    res.status(200).send(deletedExpense);
 
   } catch (error) {
     res.status(500).send(error);

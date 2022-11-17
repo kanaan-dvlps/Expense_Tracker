@@ -1,7 +1,7 @@
 const joi = require('joi');
 const { VALIDATED, EMPTY_BODY_VALIDATION_ERROR } = require('../Helpers/responses.json');
 // ! Refactor to factory pattern
-async function expenseAPIBodyValidator(body) {
+async function APIBodyValidator(body) {
   try {
     const { amount, type } = body;
     const validateSchema = joi.object().keys({
@@ -22,4 +22,4 @@ async function expenseAPIBodyValidator(body) {
   }
 };
 
-module.exports = { expenseAPIBodyValidator };
+module.exports = { APIBodyValidator };
