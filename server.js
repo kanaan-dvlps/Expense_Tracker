@@ -19,10 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // ? Routes files
-const expenses = require('./Routes/expenses');
+const expense = require('./Routes/expenses');
+const income = require('./Routes/expenses');
 
 // ? Router middleware
-app.use('/api/v1/balance/expenses', expenses);
+app.use('/api/v1/balance/expenses', expense);
+app.use('/api/v1/balance/income', income);
 
 // ! ##### Server #####
 // ? -----------------------
