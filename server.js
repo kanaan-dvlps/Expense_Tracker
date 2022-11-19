@@ -21,10 +21,12 @@ app.use(bodyParser.json());
 // ? Routes files
 const expense = require('./Routes/expenses');
 const income = require('./Routes/income');
+const balance = require('./Routes/balance');
 
 // ? Router middleware
 app.use('/api/v1/balance/expense', expense);
 app.use('/api/v1/balance/income', income);
+app.use('/api/v1/balance/balance', balance);
 
 // ! ##### Server #####
 // ? -----------------------
