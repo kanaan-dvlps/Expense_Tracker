@@ -20,9 +20,12 @@ const getBalance = async () => {
     const Incomes = await sumOfIncomesOutboundPort();
     const Expenses = await sumOfExpensesOutboundPort();
 
-    console.log(Incomes);
-    console.log(Expenses);
+    // console.log(Incomes);
+    // console.log(Expenses);
+
     const subtract = (Incomes[0].Total - Expenses[0].Total);
+
+    // console.log(subtract);
 
     const newBalance = await addBalance(subtract);
     return newBalance;
