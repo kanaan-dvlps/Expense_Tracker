@@ -6,5 +6,5 @@ describe("getBalance should return the current available balance or add the new 
       expect(data).toHaveProperty('amount');
       expect(data).toHaveProperty('_id');
     });
-  })
+  });
 });
