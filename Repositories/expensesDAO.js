@@ -39,9 +39,32 @@ const deleteExpense = async (id) => {
   }
 };
 
+const sumOfExpenses = async () => {
+  try {
+
+    const result = await Expense.aggregate([{
+      $group: {
+        _id: '',
+        'amount': { $sum: '$amount' }
+      }
+    }, {
+      $project: {
+        _id: 0,
+        'Total': '$amount'
+      }
+    }]);
+    return result;
+
+  } catch (error) {
+    // throw new BadRequest(error);
+    return error.message;
+  }
+}
+
 module.exports = {
   addExpense,
   getExpenses,
   getExpenseById,
   deleteExpense,
+  sumOfExpenses,
 };

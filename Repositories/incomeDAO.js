@@ -39,9 +39,32 @@ const deleteIncome = async (id) => {
   }
 };
 
+const sumOfIncomes = async () => {
+  try {
+
+    const result = await Income.aggregate([{
+      $group: {
+        _id: '',
+        'amount': { $sum: '$amount' }
+      }
+    }, {
+      $project: {
+        _id: 0,
+        'Total': '$amount'
+      }
+    }]);
+
+    return result;
+
+  } catch (error) {
+    throw new BadRequest(error);
+  }
+}
+
 module.exports = {
   addIncome,
   getIncomes,
   getIncomeById,
   deleteIncome,
+  sumOfIncomes,
 };

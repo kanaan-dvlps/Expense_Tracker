@@ -1,9 +1,9 @@
 const { addBalanceProxy } = require('../../Adapters/Outbound/addBalanceProxy');
 
-const addBalanceOutboundPort = async (data) => {
+const addBalanceOutboundPort = async (amount) => {
   try {
-    
-    const newBalance = await addBalanceProxy(data);
+
+    const newBalance = await addBalanceProxy(amount);
     return newBalance;
 
   } catch (error) {

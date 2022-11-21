@@ -1,37 +1,31 @@
 const { addBalanceOutboundPort } = require('../Ports/Outbound/addBalanceOutboundPort');
-const { } = require('../Ports/Outbound');
-const { } = require('../Ports/Outbound');
-const { } = require('../Ports/Outbound');
+const { sumOfIncomesOutboundPort } = require('../Ports/Outbound/sumOfIncomesOutboundPort');
+const { sumOfExpensesOutboundPort } = require('../Ports/Outbound/sumOfExpensesOutboundPort');
 
-const addBalance = async (data) => {
+const addBalance = async (amount) => {
   try {
 
-    const newBalance = await addBalanceOutboundPort(data);
+    const newBalance = await addBalanceOutboundPort(amount);
     return newBalance;
-    
-  } catch (error) {
-    throw error;
-  }
-};
-
-const getBalances = async () => {
-  try {
 
   } catch (error) {
     throw error;
   }
 };
 
-const getBalance = async (id) => {
+const getBalance = async () => {
   try {
 
-  } catch (error) {
-    throw error;
-  }
-};
+    console.log('jest');
+    const Incomes = await sumOfIncomesOutboundPort();
+    const Expenses = await sumOfExpensesOutboundPort();
 
-const deleteBalance = async () => {
-  try {
+    console.log(Incomes);
+    console.log(Expenses);
+    const subtract = (Incomes[0].Total - Expenses[0].Total);
+
+    const newBalance = await addBalance(subtract);
+    return newBalance;
 
   } catch (error) {
     throw error;
@@ -39,8 +33,5 @@ const deleteBalance = async () => {
 };
 
 module.exports = {
-  addBalance,
-  getBalances,
   getBalance,
-  deleteBalance,
 }

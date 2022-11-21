@@ -1,9 +1,9 @@
 const { addBalance } = require('../../Repositories/balanceDAO');
 
-const addBalanceProxy = async (data) => {
+const addBalanceProxy = async (amount) => {
   try {
-    
-    const newBalance = await addBalance(data);
+
+    const newBalance = await addBalance(amount);
     return newBalance;
 
   } catch (error) {

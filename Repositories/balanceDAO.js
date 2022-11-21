@@ -1,13 +1,17 @@
 const Balance = require('../Models/balance.schema');
 
-const addBalance = async (entities) => {
+const addBalance = async (amount) => {
   try {
-    const { amount, type } = entities;
 
-    const newBalance = await new Balance({ amount, type });
-    const savedBalance = await newBalance.save();
+    const amountExists = await Balance.find({ amount: { $eq: amount } });
+    if (amountExists.length > 0) {
+      return amountExists[0];
+    } else {
+      const newBalance = await new Balance({ amount });
+      const savedBalance = await newBalance.save();
+      return savedBalance;
+    }
 
-    return savedBalance;
   } catch (error) {
     throw new BadRequest(error);
   }
