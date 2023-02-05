@@ -5,7 +5,7 @@ const INCOME_API = async (data) => {
   try {
     const result = await axios({
       method: 'post',
-      url: 'http://localhost:1337/api/v1/balance/income',
+      url: 'http://localhost:3080/api/v1/balance/income',
       data: data
     });
     const response = await result.data;

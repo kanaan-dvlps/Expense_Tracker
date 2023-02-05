@@ -13,7 +13,10 @@ RUN npm ci --only=production
 RUN rm -f .npmrc
 
 # * --------------> The production image
+# ! if running on (linux/amd64) use this immage to build
 FROM node:lts-alpine@sha256:777b5a7bf0c40e37766ff8df382c900f16c688ed05ae3a72d32a26f3e9002cf9
+# ! if running on (linux/arm64/v8) use this immage to build
+# FROM arm64v8/node:lts-alpine@sha256:9aadc575bc0def3f01e9a4d1a79b236177956e0566b0d6ba05c866de0f0be596
 RUN apk add dumb-init
 RUN npm install -g nodemon
 ENV NODE_ENV production

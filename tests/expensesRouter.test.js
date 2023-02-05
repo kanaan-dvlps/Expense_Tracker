@@ -5,7 +5,7 @@ const POST_EXPENSE_API_RESULT = async (data) => {
   try {
     const result = await axios({
       method: 'post',
-      url: 'http://localhost:1337/api/v1/balance/expense',
+      url: 'http://localhost:3080/api/v1/balance/expense',
       data: data
     });
     const response = await result.data;
