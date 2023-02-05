@@ -1,5 +1,0 @@
-[] Error handeling
-[] Messaging
-[] Docker compose network
-[] Create controllers instead of putting everything in a router ( For the sake of testing )
-[] Separate your validators or see if you can put them inside your adapters ( For the sake of testing )
